@@ -5,7 +5,7 @@ import plotly.express as px
 # 1. Define a function to load the data from `/content/Sales_Analysis_Report.xlsx`
 @st.cache_data
 def load_data():
-    df = pd.read_excel('/content/Sales_Analysis_Report.xlsx')
+    df = pd.read_excel('Sales_Analysis_Report.xlsx')
     # Ensure 'OrderDate' is in datetime format for time-series analysis
     if 'OrderDate' in df.columns:
         df['OrderDate'] = pd.to_datetime(df['OrderDate'])
